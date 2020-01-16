@@ -16,26 +16,24 @@
 		<header>
 			<div class="logo">
 				<h1>Pokedex Py</h1>
-				<p>Un prototipo de API para la Visualizar Pokemon.</p>
+				<p>Una  Aplicacion Web para la Visualizar Pokemon.</p>
 			</div>
 			<form action="">
-				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar un Pokémon por su nombre">
 			</form>
 
 		</header>
-		
 		<section class="grid" id="grid">
 			{% for poke in pokemon %}
 			<div class="item" 
 				 data-etiquetas='{{poke["nombre"]}}'
-				 data-descripcion='Numero: {{poke["numero"]}} -- Nombre: {{poke["nombre"]}} -- Peso: {{poke["peso"]}} kg -- Altura: {{poke["altura"]}} m -- Habilidad: {{poke["habilidad"]}} -- Tipo: {{poke["tipo"] [0]}}|{{poke["tipo"] [1]}} -- Debilidad: {{poke["debilidad"]}} -- Base: {{poke["base"]}}'
+				 data-descripcion='Numero: {{poke["numero"]}} -- Nombre: {{poke["nombre"]}} -- Peso: {{poke["peso"]}} kg -- Altura: {{poke["altura"]}} m -- Habilidad: {{poke["habilidad"]}} -- Tipo: |{{poke["tipo"] [0]}}|{{poke["tipo"] [1]}}| -- Debilidad: {{poke["debilidad"]}} -- Base: {{poke["base"]}}'
 			> 
 				<div class="item-contenido">
 					<img src='{{poke["ThumbnailImage"]}}' alt="" style="max-width:100%;width:auto;height:auto;">
 					<h1>N° {{poke["numero"]}}</h1>
 					<h2> {{poke["nombre"]}}</h2>
-					 <h2>{{poke["tipo"] [0]}}|{{poke["tipo"] [1]}}</h2>
-
+					 <h2>|{{poke["tipo"] [0]}}|{{poke["tipo"] [1]}}|</h2>
 				</div>
 			</div>
 			{% endfor %}
@@ -48,7 +46,9 @@
 			</div>
 			<p class="descripcion"></p>
 			
+			
 		</section>
+		
 		
 		<footer class="contenedor">
 			<div class="redes-sociales">
@@ -69,7 +69,7 @@
 				</div>
 			</div>
 			<div class="creado-por">
-				<p>Diseñado por <a href="#">Marto Nieto Guerrero</a> - <a href="#">Github</a></p>
+				<p><a href="https://github.com/marto-nieto-g16/Pokedex-Py">Diseñado por: Marto Nieto Guerrero - Github</a></p>
 			</div>
 		</footer>
 	</div>
