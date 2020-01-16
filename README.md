@@ -49,4 +49,4 @@ Para realizar un Test
 
 python app.py
 
-<p align="center"> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20pokedex.png" /> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20busqueda.png" /> </p> 
+<p align="center"> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20pokedex.png" /> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20busqueda.png" /> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20resultado%20busqueda.png" /> </p> 
