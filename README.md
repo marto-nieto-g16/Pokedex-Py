@@ -2,7 +2,7 @@
 
 Es un prototipo de API para la Visualizar Todos los datos de Pokémon que necesitas, es de fácil acceso a través de RESTful moderna desarrollada en Python y bajo el framewok Flask
 
-Estos datos se encuentran se encuentran en formato Json y son obtenidos por python atravez de la funcion json.load; los cuales despues de cargarse muestra la informacion del pokemon
+Estos datos se encuentran se encuentran en formato Json y son obtenidos por python atravez de la funcion json.load.
 
 # Datos que Muestra la API 
 
