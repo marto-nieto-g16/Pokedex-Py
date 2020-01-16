@@ -1,6 +1,6 @@
 # Pokedex-Py
 
-Es una Aplicacion Web para la Visualizar Todos los datos de Pokémon que necesitas, es de fácil acceso a través de RESTful moderna desarrollada en Python y bajo el framewok Flask
+Es una Aplicacion Web para la Visualizar Todos los datos de Pokémon, Desarrollada en el framewok Flask de Python
 
 Estos datos se encuentran se encuentran en formato Json y son obtenidos por python atravez de la funcion json.load.
 
