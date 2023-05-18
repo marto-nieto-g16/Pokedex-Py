@@ -1,52 +1,35 @@
 # Pokedex-Py
 
-Es una Aplicacion Web para la Visualizar Todos los datos de Pokémon, Desarrollada en el framewok Flask de Python
+Este proyecto utiliza Flask para mostrar una lista de Pokémon utilizando datos almacenados en formato JSON.
 
-Estos datos se encuentran se encuentran en formato Json y son obtenidos por python atravez de la funcion json.load.
+## Descripción
 
-# Datos que Muestra la API 
+Este proyecto utiliza Flask, un marco de trabajo para aplicaciones web en Python, para mostrar una lista de Pokémon utilizando datos almacenados en formato JSON. Al acceder a la página principal de la aplicación, se mostrará una tabla que contiene información de cada uno de los Pokémon, incluyendo su nombre, número de Pokédex y tipo.
 
-  * Numero
-  * Nombre
-  * Tipo
-  * Habilidad
-  * Entre otras cosas mas
+Los datos se cargan de un archivo JSON ubicado en la carpeta `static/data_pokemon/pokemon-list.json`. La función `Load_JSON()` se encarga de leer el archivo y convertirlo en un objeto Python que puede ser utilizado por la aplicación para mostrar la información en la página web.
 
-# Requisitos
+## Instalación
 
-1. Python 3.x
-2. Libreria Flask y JSON
-  
-  # Librerias y Modulos a Utilizar 
- 
- from flask import Flask, render_template
- import json
+Para instalar las dependencias del proyecto, es necesario utilizar pip, un administrador de paquetes para Python. En una terminal, ejecute el siguiente comando:
 
-from flask import Flask y app = Flask(__name__) : Es una funcion de  WSGI que permite obtener la información de la petición, realizar una operación y posteriormente generar una respuesta.
+```
+pip install Flask
+```
 
-render_template: Es un Modulo de Flask que nos permite Renderizar la informacion obtenida de una metodo o variable y enviarla a una platilla html.
+Después de instalar Flask, clone el repositorio de GitHub en su computadora utilizando el siguiente comando:
 
-En este Proyecto se utilizo para enviar los datos obtenidos de JSON a la plantilla index.html y mostrar los datos Ordenados en forma de informacion
-  
-  # Funcion para Cargar un Archivo Json y Obtener Los Datos de Cada Pokemon  
-  
-  def LoadJson:
-    with open('./static/data_pokemon/pokemon-list.json') as file:  -> Se ingresa la ubicacion del archivo el cual desea obtener los                                                                            metadatos
-    return json.load(file)   -> Retorna Cada Metadato del archivo
-    
-@app.route('/')  -> Funcion que permite acceder a index() desde la página principal (‘/‘) y devolver su contenido que simplemente va a devolver
-def index():
-	return render_template('index.html', pokemon=Load_JSON())
- 
-# Ejecutar 
+```
+git clone https://github.com/marto-nieto-g16/Pokedex-Py.git
+```
 
-Cuando se ejecuta el programa con la función: app.run lo que se hace es ejecutar un servidor web para hacer las pruebas y se puede acceder a él desde cualquier direccion (0.0.0.0) desde el puerto 5000. Además se ha activado la depuración (debug= True),
+Reemplace `your-username` y `your-project` con su nombre de usuario de GitHub y el nombre del proyecto, respectivamente.
 
-if __name__ == '__main__':
-  app.run(host='0.0.0.0', debug=True)
-  
-Para realizar un Test 
+## Uso
 
+Para ejecutar la aplicación, abra una terminal y navegue hasta la carpeta raíz del proyecto. Ejecute el siguiente comando:
+
+```
 python app.py
+```
 
-<p align="center"> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20pokedex2.png" /> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20busqueda.png" /> <img src="https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20resultado%20busqueda.png" /> </p> 
+Esto iniciará el servidor de Flask y la aplicación estará disponible en `http://localhost:5000/`. Si desea acceder a la aplicación desde otra computadora en la misma red, cambie `localhost` por la dirección IP de la computadora que está ejecutando el servidor.
