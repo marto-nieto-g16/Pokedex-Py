@@ -1,17 +1,22 @@
-
 from flask import Flask, render_template
+import requests
 import json
 
 app = Flask(__name__)
 
-def Load_JSON():
-	with open('static/data_pokemon/pokemon-list.json') as file:
-		return json.load(file)
-
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
-	return render_template('index.html', pokemon=Load_JSON())
+    # URL del archivo JSON
+    url = "https://raw.githubusercontent.com/marto-nieto-g16/Api-Pokemon/main/pokemon-list.json"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        # Cargar el contenido JSON
+        pokemon_data = json.loads(response.text)
+        return render_template('index.html', pokemon_data=pokemon_data)
+    else:
+        return "Error al cargar el archivo JSON."
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', debug=True)
+  app.run(host='0.0.0.0', debug=True, port=4001)
