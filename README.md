@@ -4,9 +4,7 @@ He aquí un borrador para el archivo `README.md` de tu proyecto en Flask:
 
 # Pokedex Py
 
-!Pokedex Py
-
-<span>https://github.com/marto-nieto-g16/Pokedex-Py/blob/master/index%20busqueda.png</span><span>)</span>
+![Pokedex Py Logo](static/images/favicon.ico)
 
 Pokedex Py es una aplicación web desarrollada en Flask que permite a los usuarios visualizar una lista de Pokémon, junto con sus características y detalles básicos. La aplicación carga los datos de un archivo JSON alojado en un repositorio de GitHub y muestra una interfaz intuitiva para explorar cada Pokémon.
 
@@ -16,6 +14,9 @@ Pokedex Py es una aplicación web desarrollada en Flask que permite a los usuari
 - **Búsqueda Rápida**: Permite buscar Pokémon por nombre en tiempo real.
 - **Detalles en Popup**: Muestra una vista ampliada de los detalles del Pokémon seleccionado mediante un popup.
 - **Interfaz Responsable**: Diseño adaptable que se visualiza correctamente en dispositivos móviles y de escritorio.
+
+![Index de pantalla de Pokedex Py](static/images/index.png)
+
 
 ## Tecnologías
 
