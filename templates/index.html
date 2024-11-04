@@ -146,7 +146,7 @@
              data-descripcion='Numero: {{poke["numero"]}} -- Nombre: {{poke["nombre"]}} -- Peso: {{poke["peso"]}} kg -- Altura: {{poke["altura"]}} m -- Habilidad: {{poke["habilidad"]}} -- Tipo: |{{poke["tipo"] [0]}}|{{poke["tipo"] [1]}}| -- Debilidad: {{poke["debilidad"]}} -- Base: {{poke["base"]}}'
         >
             <div class="item-contenido">
-                <img src='{{poke["ThumbnailImage"]}}' alt="Imagen de {{poke["nombre"]}}" style="max-width:100%;height:auto;">
+                <img src='{{poke["ThumbnailImage"]}}' alt="Imagen de {{poke["nombre"]}}" style="max-width:100%;height:auto;" loading="lazy">
                 <h1>N° {{poke["numero"]}}</h1>
                 <h2>{{poke["nombre"]}}</h2>
                         <h2>
@@ -194,5 +194,42 @@
 <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
 <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
 <script src="static/js/main.js"></script>
+
+<script>
+// Filtro de búsqueda
+document.getElementById('barra-busqueda').addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    const pokemons = document.querySelectorAll('.item');
+    
+    pokemons.forEach(pokemon => {
+        const nombre = pokemon.dataset.etiquetas.toLowerCase();
+        if (nombre.includes(searchTerm)) {
+            pokemon.style.display = 'block';
+        } else {
+            pokemon.style.display = 'none';
+        }
+    });
+});
+
+// Popup de detalles
+const items = document.querySelectorAll('.item');
+const overlay = document.getElementById('overlay');
+const overlayImg = overlay.querySelector('img');
+const overlayDesc = overlay.querySelector('.descripcion');
+const closeBtn = document.getElementById('btn-cerrar-popup');
+
+items.forEach(item => {
+    item.addEventListener('click', function() {
+        overlayImg.src = this.querySelector('img').src;
+        overlayDesc.textContent = this.dataset.descripcion;
+        overlay.style.display = 'flex';
+    });
+});
+
+closeBtn.addEventListener('click', function() {
+    overlay.style.display = 'none';
+});
+</script>
+
 </body>
 </html>
